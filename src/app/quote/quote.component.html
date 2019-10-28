@@ -1,9 +1,15 @@
 <div>
-    <ul *ngFor='let quote of quotes'>
-        <div >
-            <li>{{quote.name + quote.author}}
-                <app-quote-description></app-quote-description>
-            </li>
+    <ul >
+        <div *ngFor='let quote of quotes;let i =index' >
+            <li>{{quote.name }}
+                {{quote.author}}
+                {{quote.createdby}}
+            </li>    
+                <button (click)='toggleQuote(i)'>Toggle Quote</button>
+                <app-quote-description *ngIf='quote.showQuote'[quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-description>
+                
+                
+           
         </div>
     </ul>
 
