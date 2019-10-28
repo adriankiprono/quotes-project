@@ -4,4 +4,6 @@
    {{quote.published|date}}
 
 </p>
+<button (click)='upvotes()'>Upvote{{quote.upvotes}}</button>
+<button (click)='downvotes()'>Downvote{{quote.downvotes}}</button>
 <button (click)='quoteDelete(true)'>Delete the Quote</button>

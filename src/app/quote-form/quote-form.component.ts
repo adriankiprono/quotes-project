@@ -8,11 +8,31 @@ import { Quote} from '../quote'
   styleUrls: ['./quote-form.component.css']
 })
 export class QuoteFormComponent implements OnInit {
-  newQuote = new Quote ('','','','',new Date());
+
+  name:string;
+  author:string;
+  quote:string;
+  createdby:string;
+  published:Date;
+
+  //myQuote = new Quote ('','','','',new Date);
   @Output() addQuote = new EventEmitter<Quote>();
+  showQuote: any;
+  upvotes: any;
+  downvotes: any;
    
   submitQuote(){
-    this.addQuote.emit(this.newQuote)
+    const myQuote = {
+      name: this.name,
+      author: this.author,
+      quote: this.quote,
+      createdby: this.createdby,
+      published: this.published,
+      upvotes:this.upvotes,
+      downvotes:this.downvotes,
+      showQuote: false
+    }
+    this.addQuote.emit(myQuote)
   }
 
   constructor() { }

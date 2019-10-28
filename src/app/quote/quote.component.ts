@@ -16,9 +16,9 @@ export class QuoteComponent implements OnInit {
 
 
   ];
-  addNewQuote(quote){
-    let quoteLength = this.quotes.length;
-    quote.id =quoteLength+1;
+  addNewQuote(quote:Quote){
+    // let quoteLength = this.quotes.length;
+    // quote.id =quoteLength+1;
     this.quotes.push(quote)
   }
   toggleQuote(index){
