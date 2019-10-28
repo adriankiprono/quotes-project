@@ -28,8 +28,8 @@ export class QuoteFormComponent implements OnInit {
       quote: this.quote,
       createdby: this.createdby,
       published: this.published,
-      upvotes:this.upvotes,
-      downvotes:this.downvotes,
+      upvotes:0,
+      downvotes:0,
       showQuote: false
     }
     this.addQuote.emit(myQuote)
