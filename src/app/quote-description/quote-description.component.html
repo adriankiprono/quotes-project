@@ -1,2 +1,7 @@
-<p>{{quote.quote}}</p>
+<p>{{quote.quote}}
+    {{quote.author}} 
+   {{quote.createdby}}
+   {{quote.published|date}}
+
+</p>
 <button (click)='quoteDelete(true)'>Delete the Quote</button>

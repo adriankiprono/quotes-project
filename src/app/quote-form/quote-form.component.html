@@ -42,6 +42,16 @@
                     </div>
           
             </div>
+            <div class="form-group">
+                <label for="published">published by</label>
+                <input type='date' id="published" [(ngModel)]="newQuote.published" name="published" #published="ngModel" required>
+          <div [hidden]="published.valid || published.pristine" class="alert alert-danger">
+            <p>Date is required</p>
+          </div>
+
+
+            </div>
+            
             <div>
                     <button type="submit" class="btn btn-success">Create  new Quote</button>
             </div>
