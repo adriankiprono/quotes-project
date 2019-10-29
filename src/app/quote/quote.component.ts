@@ -8,7 +8,7 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
-    new Quote ('eric','mike','shglsk','',new Date ()),
+    new Quote ('eric','mike','shglsk','',new Date (1974 ,4, 7)),
     new Quote ('eric','mike','shglsk','',new Date ()),
     new Quote ('eric','mike','shglsk','',new Date ()),
     new Quote ('eric','mike','shglsk','',new Date ()),
