@@ -13,9 +13,10 @@
     font-family: 'Livvic', sans-serif;
 }
 .container{
-    border: 6px;
+    border: 6px solid;
     border-color: black;
     
+
 }
 
 
