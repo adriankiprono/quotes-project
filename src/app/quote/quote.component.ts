@@ -9,7 +9,7 @@ import { Quote } from '../quote'
 export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
     new Quote ('quote','carl segan','For me, it is far better to grasp the Universe as it really is than to persist in delusion, however satisfying and reassuring. Carl Sagan','csar',new Date (1974 ,4, 7),),
-    new Quote ('quote','carl segan','For me, it is far better to grasp the Universe as it really is than to persist in delusion, however satisfying and reassuring. Carl Sagan','csar',new Date ()),
+    new Quote ('quote','carl segan','For me, it is far better to grasp the Universe as it really is than to persist in delusion, however satisfying and reassuring. Carl Sagan','csar',new Date (1923,3,5)),
     
    
 
