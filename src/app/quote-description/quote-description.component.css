@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css?family=Arimo|Bai+Jamjuree|Cabin+Sketch|Cinzel+Decorative|Coming+Soon|Cookie|Gruppo|Kaushan+Script|Livvic|Marmelad|Merienda+One|Roboto|Syncopate&display=swap');
+.author{
+    font-family: 'Merienda One', cursive;
+}
+.created{
+    font-family: 'Marmelad', sans-serif;
+}
+.quote{
+    font-family: 'Coming Soon', cursive;
+}
+.published{
+    font-family: 'Livvic', sans-serif;
+}
+.container{
+    border: 6px;
+    border-color: black;
+    
+}
+
+

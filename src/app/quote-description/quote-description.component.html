@@ -1,9 +1,14 @@
-<p>{{quote.quote}}
-    {{quote.author}} 
-   {{quote.createdby}}
-   {{quote.published|dateCount}}
+<div class="container">
+        <p  class="quote">
+            
+            {{quote.quote}}
+            </p>
+            <p class="author">{{quote.author}} </p>
+            <p class="created"> created by{{quote.createdby}}</p>
+            <p class="published"> this quote was published {{quote.published|dateCount}} days ago</p>
+            <button (click)='upvotes()'>Upvote{{quote.upvotes}}</button>
+            <button (click)='downvotes()'>Downvote{{quote.downvotes}}</button>
+            <button (click)='quoteDelete(true)'>Delete the Quote</button>
+            
 
-</p>
-<button (click)='upvotes()'>Upvote{{quote.upvotes}}</button>
-<button (click)='downvotes()'>Downvote{{quote.downvotes}}</button>
-<button (click)='quoteDelete(true)'>Delete the Quote</button>
+</div>
