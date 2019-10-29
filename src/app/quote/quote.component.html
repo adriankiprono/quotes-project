@@ -1,23 +1,26 @@
 <div class="container">
         <div class="row">
+                
+               
                 <div class="col-md-6">
-                        <ol >
-                                <div *ngFor='let quote of quotes;let i =index' >
-                                    <li>
-                                        <p class="name">{{quote.name }}</p>
-                                        
-                                        
-                                    </li>    
+                        
+                                <div  appHighlighter *ngFor=' let quote of mostVotes;let i =index' >
+ 
+                                    <ul>
+                                        <li>    <p  class="name">{{quote.name|uppercase}}</p></li>
+                                    </ul>   
                                         <button (click)='toggleQuote(i)'>Toggle Quote</button>
                                         <app-quote-description *ngIf='quote.showQuote'[quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-description>  
                                 </div>
-                        </ol>          
+                                  
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" app>
                     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
             
                 </div>
+                
             
         </div>
+       
 
 </div>

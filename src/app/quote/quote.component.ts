@@ -7,9 +7,10 @@ import { Quote } from '../quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+
   quotes:Quote[]=[
     new Quote ('quote','carl segan','For me, it is far better to grasp the Universe as it really is than to persist in delusion, however satisfying and reassuring. Carl Sagan','csar',new Date (1974 ,4, 7),),
-    new Quote ('quote','carl segan','For me, it is far better to grasp the Universe as it really is than to persist in delusion, however satisfying and reassuring. Carl Sagan','csar',new Date (1923,3,5)),
+    new Quote ('quote','Albert Einstein','Life is like riding a bicycle. To keep your balance you must keep moving. ','csar',new Date (1923,3,5)),
     
    
 
@@ -33,11 +34,17 @@ export class QuoteComponent implements OnInit {
       }
     }
   } 
-  mostLikes(index){
-    const votes= [];
-    this.quotes.forEach(quote => votes.push(quote.upvotes));
-    if (this.quotes[index].upvotes===Math.max(...votes)){
-      return true;
+  get mostVotes(){
+    return this.quotes.sort((n,m) =>{
+      return<any>new Date (n.upvotes)-<any> new Date (m.upvotes);
+    });
+
+  }
+   get topMost(){
+    for (let quote of this.quotes){
+      if(this.quotes.indexOf(quote)===0 && quote.upvotes>0){
+        return quote.name
+      }
     }
   }
 

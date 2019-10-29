@@ -20,6 +20,7 @@ export class QuoteDescriptionComponent implements OnInit {
   downvotes() {
     this.quote.downvotes +=1
   }
+  
 
   constructor() { }
 
